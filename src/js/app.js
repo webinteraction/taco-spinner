@@ -15,4 +15,7 @@ const switchBtns = new Switch()
 // Jiggle buttons
 const jiggleButtons = new Switch({
   attr: 'data-jiggle',
+  onSwitch: (btn, isSwitched) => {
+    btn.querySelector('.spinner').textContent = isSwitched ? '😬' : '🌯'
+  },
 })
