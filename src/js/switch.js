@@ -4,6 +4,7 @@ export class Switch {
     // Configure component
     this.config = Object.assign({
       attr: 'data-switch',
+      onSwitch: (btn, isSwitched) => {},
     }, options)
 
     // Initialize component
@@ -36,8 +37,14 @@ export class Switch {
     // Get the button
     const btn = e.target.closest(`[${this.config.attr}]`)
 
+    // Get switch lcass
+    const switchClass = btn.getAttribute(this.config.attr)
+
     // Switch that button
-    btn.classList.toggle(btn.getAttribute(this.config.attr))
+    btn.classList.toggle(switchClass)
+
+    // Fire onSwitch event
+    this.config.onSwitch(btn, btn.classList.contains(switchClass))
   }
 
   /**
