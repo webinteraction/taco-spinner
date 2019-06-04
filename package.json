@@ -1,0 +1,15 @@
+{
+  "name": "taco-spinner",
+  "version": "1.0.0",
+  "description": "Spin some tacos, and introduce the concept of web interactions to boot.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "parcel src/index.html --open"
+  },
+  "author": "@kyleschaeffer",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^1.12.3",
+    "sass": "^1.18.0"
+  }
+}
