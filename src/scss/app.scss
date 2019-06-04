@@ -1,9 +1,8 @@
-// Taco button
-#taco-btn,
-#burrito-btn {
+// Spin buttons
+.spin-btn {
   display: block;
   font-size: 80px;
-  height: 200px;
+  height: 140px;
   width: 100%;
 
   + button {
@@ -12,16 +11,11 @@
 
   // Spin that taco
   &.spin {
-    .taco {
+    .spinner {
       animation: spin .1s linear infinite;
       display: inline-block;
     }
   }
-}
-
-// Burrito button
-#burrito-btn {
-  background-color: #f06b4e;
 }
 
 // Spin
