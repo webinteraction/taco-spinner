@@ -13,6 +13,14 @@
       display: inline-block;
     }
   }
+
+  // Jiggle that burrito
+  &.jiggle {
+    .spinner {
+      animation: jiggle .1s linear infinite;
+      display: block;
+    }
+  }
 }
 
 // Spin
@@ -23,5 +31,21 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+// Jiggle
+@keyframes jiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
   }
 }
